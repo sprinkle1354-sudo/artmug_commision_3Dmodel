@@ -905,6 +905,17 @@
         }, 500);
     })();
 </script>
+<script>
+  // 부모(아트머그)에게 현재 실제 높이를 전달
+  function sendHeight() {
+    var h = document.body.scrollHeight;
+    window.parent.postMessage({ iframeHeight: h }, '*');
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  // 이미지·폰트 로딩 지연 대비 반복 전송
+  setInterval(sendHeight, 500);
+</script>
 
 </body>
 </html>
