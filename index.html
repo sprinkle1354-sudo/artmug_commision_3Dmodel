@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D 모델링 포트폴리오 & 판매 - 멍게</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-pink: #ff85a2;
+            --light-pink: #fff0f3;
+            --deep-pink: #ff4d6d;
+            --primary-purple: #9d8df1;
+            --light-purple: #f3f0ff;
+            --text-color: #444;
+            --shadow: 0 10px 30px rgba(255, 133, 162, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; }
+        body { background-color: #fff; color: var(--text-color); line-height: 1.6; overflow-x: hidden; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); margin-bottom: 10px; font-weight: 900; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; }
+
+        .container { max-width: 1000px; margin: -40px auto 50px; padding: 0 20px; }
+
+        /* Event Banner */
+        .event-banner {
+            background: #fff0f3;
+            border: 2px dashed #ff4d6d;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .event-highlight { color: #ff4d6d; font-weight: 900; font-size: 1.2rem; border-bottom: 2px solid #ff4d6d; }
+
+        /* Section Styling */
+        section {
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary-purple);
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--light-purple);
+            padding-bottom: 10px;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .portfolio-card {
+            border-radius: 20px;
+            overflow: hidden;
+            background: #f9f9f9;
+            transition: 0.3s;
+        }
+
+        .portfolio-card:hover { transform: translateY(-5px); }
+
+        .portfolio-img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #eee; /* 이미지 없을 시 회색 배경 */
+            object-fit: cover;
+        }
+
+        .portfolio-info { padding: 15px; text-align: center; }
+        .portfolio-info strong { display: block; color: #333; }
+
+        /* Price Table Style */
+        .price-list { list-style: none; }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .price-name { font-weight: 700; }
+        .price-val { font-weight: 900; color: var(--deep-pink); }
+        .price-detail { font-size: 0.85rem; color: #888; margin-top: 4px; }
+
+        /* Licensing */
+        .license-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .license-card {
+            padding: 20px;
+            border-radius: 20px;
+            background: var(--light-purple);
+            text-align: center;
+        }
+
+        .footer { text-align: center; padding: 50px; color: #bbb; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>3D Modeling & Assets</h1>
+    <p>고퀄리티 모델링 데이터 및 자산 등록 페이지</p>
+</div>
+
+<div class="container">
+    <div class="event-banner">
+        <div style="font-weight: 900; color: #ff4d6d; margin-bottom: 5px;">✨ 오픈 기념 특별 프로모션 ✨</div>
+        <div>작품 등록 기념 <span class="event-highlight">전 품목 30% 할인</span> 혜택 적용 중!</div>
+        <p style="font-size: 0.8rem; color: #999; margin-top: 10px;">* 아래 기재된 가격은 이미 30% 할인이 적용된 금액입니다.</p>
+    </div>
+
+    <section>
+        <div class="section-title">등록 작품 리스트</div>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-img"></div> <div class="portfolio-info">
+                    <strong>캐릭터 모델링 A타입</strong>
+                    <small>Full Rigging / FBX</small>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-img"></div>
+                <div class="portfolio-info">
+                    <strong>사물/프롭 패키지</strong>
+                    <small>Low Poly Assets</small>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-img"></div>
+                <div class="portfolio-info">
+                    <strong>배경 테마 모델링</strong>
+                    <small>Unity Scene Included</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">판매 가격 안내</div>
+        <div class="price-list">
+            <div class="price-item">
+                <div>
+                    <div class="price-name">단순 소품/프롭 (Simple Props)</div>
+                    <div class="price-detail">작은 가구, 악세사리 등 단일 모델링</div>
+                </div>
+                <div class="price-val">3.5만~</div>
+            </div>
+            <div class="price-item">
+                <div>
+                    <div class="price-name">표준 캐릭터 모델링 (Standard Character)</div>
+                    <div class="price-detail">기본 리깅 포함, 텍스처 작업 완료</div>
+                </div>
+                <div class="price-val">28.0만~</div>
+            </div>
+            <div class="price-item">
+                <div>
+                    <div class="price-name">최적화 및 리토폴로지 (Retopology)</div>
+                    <div class="price-detail">기존 모델링 데이터 경량화 작업</div>
+                </div>
+                <div class="price-val">7.0만~</div>
+            </div>
+            <div class="price-item">
+                <div>
+                    <div class="price-name">커스텀 외주 제작 (Custom Order)</div>
+                    <div class="price-detail">신규 디자인 및 전용 모델링 제작</div>
+                </div>
+                <div class="price-val">별도 문의</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">라이선스 안내</div>
+        <div class="license-box">
+            <div class="license-card">
+                <h4 style="color:var(--primary-purple)">개인용/방송용</h4>
+                <p style="font-size: 0.85rem; margin-top:10px;">수익 창출이 가능한 유튜브/치지직 방송 사용 가능. 파일 재판매는 불가능합니다.</p>
+            </div>
+            <div class="license-card">
+                <h4 style="color:var(--deep-pink)">상업적 이용</h4>
+                <p style="font-size: 0.85rem; margin-top:10px;">게임 제작, 기업용 프로젝트 등 영리 목적 사용. 별도 협의가 필요합니다.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2026 Mung-gae 3D Artworks. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
